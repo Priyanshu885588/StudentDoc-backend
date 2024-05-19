@@ -13,8 +13,9 @@ router
 router
   .route("/getStudentinfo")
   .get(auth.studentAuthMiddlware, studentController.getStudentDetails);
-  router
+router
   .route("/getStudentdocuments")
   .get(auth.studentAuthMiddlware, studentController.getStudentDocuments);
+router.route("/smpi").get(studentController.smpi);
 
 module.exports = router;
